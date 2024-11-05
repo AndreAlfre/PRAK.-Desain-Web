@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Warna Kustom */
+.bg-purple-500 {
+  background-color: #6b46c1;
+  /* Ungu Cerah */
+}
+
+.bg-purple-600 {
+  background-color: #553c9a;
+  /* Ungu Sedang */
+}
+
+.bg-purple-700 {
+  background-color: #44337a;
+  /* Ungu Gelap */
+}
+
+/* Gaya Kustom untuk Header */
+h1 {
+  @apply text-5xl font-bold mb-8 text-purple-500 text-center shadow-lg;
+}
+
+/* Kontainer Form */
+#session-container,
+#form-tambah-buku,
+#daftar-buku,
+#buku-favorit {
+  @apply mb-6 p-6 bg-gray-800 rounded-lg shadow-md transition-transform duration-300;
+}
+
+/* Efek Hover untuk Kontainer */
+#session-container:hover,
+#form-tambah-buku:hover,
+#daftar-buku:hover,
+#buku-favorit:hover {
+  @apply transform scale-105;
+}
+
+/* Tombol */
+button {
+  @apply transition duration-200 ease-in-out;
+}
+
+/* Efek Hover pada Tombol */
+button:hover {
+  @apply bg-purple-600 transform translate-y-1;
+}
+
+/* Input */
+input {
+  @apply p-3 w-full mb-4 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+/* Daftar Buku */
+#daftar-buku,
+#buku-favorit {
+  @apply max-h-64 overflow-y-auto bg-gray-700 p-4 rounded-lg;
+}
+
+/* Elemen Buku */
+.buku-item {
+  @apply p-2 border-b border-gray-600 hover:bg-gray-600 transition duration-200;
+}
+
+/* Mengubah warna saat hover di item buku */
+.buku-item:hover {
+  @apply bg-gray-600;
+}

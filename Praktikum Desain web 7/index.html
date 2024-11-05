@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Buku Favorit</title>
+    <!-- Hubungkan file CSS Tailwind -->
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans bg-gray-900 text-white p-6 min-h-screen">
+    <!-- Header -->
+    <h1 class="text-4xl font-bold mb-6 text-purple-500">
+      Aplikasi Buku Favorit
+    </h1>
+
+    <!-- Input Nama Pengguna -->
+    <div
+      id="session-container"
+      class="mb-6 p-6 bg-gray-800 rounded-lg shadow-lg"
+    >
+      <input
+        type="text"
+        id="namaPengguna"
+        placeholder="Masukkan Nama Anda"
+        class="mr-2 p-3 w-3/4 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500"
+      />
+      <button
+        id="btnSimpanNama"
+        class="p-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+      >
+        Simpan Nama
+      </button>
+      <h3 id="salamPengguna" class="text-xl mt-4 text-purple-300"></h3>
+    </div>
+
+    <!-- Form Tambah Buku -->
+    <form
+      id="form-tambah-buku"
+      class="mb-6 p-6 bg-gray-800 rounded-lg shadow-lg"
+    >
+      <input
+        type="text"
+        id="judul"
+        placeholder="Judul Buku"
+        required
+        class="w-full p-3 mb-4 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500"
+      />
+      <input
+        type="text"
+        id="penulis"
+        placeholder="Penulis"
+        required
+        class="w-full p-3 mb-4 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500"
+      />
+      <input
+        type="number"
+        id="tahun"
+        placeholder="Tahun Terbit"
+        required
+        class="w-full p-3 mb-4 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500"
+      />
+      <button
+        type="submit"
+        class="w-full p-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+      >
+        Tambah Buku
+      </button>
+    </form>
+
+    <!-- Daftar Buku -->
+    <h2 class="text-3xl font-semibold mb-4 text-purple-500">Daftar Buku</h2>
+    <div id="daftar-buku" class="bg-gray-800 p-6 rounded-lg shadow-lg"></div>
+
+    <!-- Buku Favorit -->
+    <h2 class="text-3xl font-semibold mt-8 mb-4 text-purple-500">
+      Buku Favorit
+    </h2>
+    <div id="buku-favorit" class="bg-gray-800 p-6 rounded-lg shadow-lg"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
