@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reusable button style */
+.btn {
+    @apply px-4 py-2 rounded-md text-white bg-primary hover:bg-blue-700;
+  }
+  
+  /* Toggle dark mode button */
+  .toggle-dark-mode {
+    @apply absolute top-4 right-4 bg-secondary text-gray-900;
+  }

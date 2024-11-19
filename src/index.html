@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praktikum Tailwind CSS - Grid Layout dan Dark Mode</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<script>
+  const toggleDarkMode = document.getElementById('dark-mode-toggle');
+  const htmlElement = document.documentElement;
+
+  toggleDarkMode.addEventListener('click', () => {
+    htmlElement.classList.toggle('dark');
+  });
+</script>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
+  <header class="bg-primary text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Galeri Foto</h1>
+      <button id="dark-mode-toggle" class="btn toggle-dark-mode">Toggle Dark Mode</button>
+    </div>
+  </header>
+  <section class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Selamat Datang di Galeri Kami</h2>
+      <p class="text-lg mb-8">Koleksi foto terbaik untuk Anda.</p>
+    </div>
+  </section>
+  <section class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src="https://via.placeholder.com/400x250" alt="Foto 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Judul Foto 1</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 1.</p>
+        </div>
+      </div>
+      <!-- Tambahkan Card 2, 3, dst. dengan struktur yang sama -->
+      <!-- Card 2 -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src="https://via.placeholder.com/400x250" alt="Foto 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Judul Foto 2</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 2.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src="https://via.placeholder.com/400x250" alt="Foto 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Judul Foto 3</h3>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+       <img src="https://via.placeholder.com/400x250" alt="Foto 4" class="w-full h-48 object-cover">
+       <div class="p-4">
+          <h4 class="text-xl font-semibold mb-2">Judul Foto 4</h4>
+          <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+        </div>
+    </div>
+    <!-- Card 5 -->
+     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src="https://via.placeholder.com/400x250" alt="Foto 5" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h5 class="text-xl font-semibold mb-2">Judul Foto 5</h5>
+        <p class="text-gray-600 dark:text-gray-400">Deskripsi singkat tentang foto 3.</p>
+      </div>
+  </section>
+  <footer class="bg-primary text-white p-4 mt-10">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Galeri Foto. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
